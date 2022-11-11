@@ -18,7 +18,7 @@ public class ChangeCameraButton : MonoBehaviour
     {
         // get the UIDocument component (make sure this name matches!)
         var uiDocument = GetComponent<UIDocument>();
-        // get the rootVisualElement (the frame component)
+        //get the rootVisualElement (the frame component)
         var rootVisualElement = uiDocument.rootVisualElement;
         frame = rootVisualElement.Q<VisualElement>("Frame");
         // get the button, which is nested in the frame
@@ -33,7 +33,7 @@ public class ChangeCameraButton : MonoBehaviour
         EnableCamera(click);
         click++;
         // reset counter so it is not out of bounds (only have 4 cameras)
-        if(click > 3){
+        if(click > 2){
             click = 0;
         }
     }
